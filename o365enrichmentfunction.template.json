@@ -81,7 +81,7 @@
                 "displayName": "webdeploy"
             },
             "properties": {
-                "packageUri": "[concat('https://',parameters('codeStorageAccount'), '.blob.core.windows.net/', parameters('codeStorageContainer'), '/', parameters('codeZipFile'))]",
+                "packageUri": "https://github.com/swiftsolves-msft/LogAnalyticsEnrichSample/raw/master/EnrichFunc.zip",
                 "dbType": "None",
                 "connectionString": ""
             }
