@@ -61,17 +61,8 @@
             "kind": "functionapp"
         },
         {
-            "apiVersion": "2015-05-01-preview",
-            "type": "Microsoft.Storage/storageAccounts",
-            "name": "[parameters('storageName')]",
-            "location": "[resourceGroup().location]",
-            "properties": {
-                "accountType": "Standard_LRS"
-            }
-        },
-        {
             "name": "MSDeploy",
-            "type": "extensions",
+            "type": "Extensions",
             "location": "[resourceGroup().location]",
             "apiVersion": "2015-08-01",
             "dependsOn": [
@@ -84,6 +75,15 @@
                 "packageUri": "https://github.com/swiftsolves-msft/LogAnalyticsEnrichSample/raw/master/EnrichFunc.zip",
                 "dbType": "None",
                 "connectionString": ""
+            }
+        },
+        {
+            "apiVersion": "2015-05-01-preview",
+            "type": "Microsoft.Storage/storageAccounts",
+            "name": "[parameters('storageName')]",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "accountType": "Standard_LRS"
             }
         },
         {
